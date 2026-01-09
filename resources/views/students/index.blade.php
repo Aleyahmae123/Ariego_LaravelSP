@@ -9,7 +9,7 @@
 
     <table> 
         <tr>
-            <th>Name</th>
+            <th>Names</th>
             <th>Course</th>
             <th>Year Level</th>
             <th>Actions</th>
@@ -17,7 +17,7 @@
 // make this a dynamic table //
         <tr>
             <td>Juan Dela Cruz</td>
-            <td>BS Information Technology</td>
+            <td>BS Information Science</td>
             <td>3rd Year</td>
             <td>
                 <a href="/students/1">View</a> |
