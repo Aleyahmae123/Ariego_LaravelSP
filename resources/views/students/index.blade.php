@@ -16,7 +16,7 @@
         </tr>
 // make this a dynamic table //
         <tr>
-            <td>Juan Dela Cruz</td>
+            <td>Juan Cruz</td>
             <td>BS Information Science</td>
             <td>3rd Year</td>
             <td>
