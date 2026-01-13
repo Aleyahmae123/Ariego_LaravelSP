@@ -42,7 +42,7 @@
 
         button, a.button {
             padding: 8px 12px;
-            background-color: #502c48;
+         background-color: #2c3e50;
             color: white;
             text-decoration: none;
             border: none;

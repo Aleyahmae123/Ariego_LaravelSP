@@ -7,32 +7,41 @@
 
     <br><br>
 
-    <table> 
+    @php
+        $students = [
+            [
+                'id' => 1,
+                'name' => 'Juan Cruz',
+                'course' => 'BS Information Science',
+                'year' => '3rd Year'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Maria Santos',
+                'course' => 'BS Computer Science',
+                'year' => '2nd Year'
+            ]
+        ];
+    @endphp
+
+    <table>
         <tr>
-            <th>Names</th>
+            <th>Name</th>
             <th>Course</th>
             <th>Year Level</th>
             <th>Actions</th>
         </tr>
-// make this a dynamic table //
-        <tr>
-            <td>Juan Cruz</td>
-            <td>BS Information Science</td>
-            <td>3rd Year</td>
-            <td>
-                <a href="/students/1">View</a> |
-                <a href="/students/1/edit">Edit</a>
-            </td>
-        </tr>
 
-        <tr>
-            <td>Maria Santos</td>
-            <td>BS Computer Science</td>
-            <td>2nd Year</td>
-            <td>
-                <a href="/students/2">View</a> |
-                <a href="/students/2/edit">Edit</a>
-            </td>
-        </tr>
+        @foreach ($students as $student)
+            <tr>
+                <td>{{ $student['name'] }}</td>
+                <td>{{ $student['course'] }}</td>
+                <td>{{ $student['year'] }}</td>
+                <td>
+                    <a href="/students/{{ $student['id'] }}">View</a> |
+                    <a href="/students/{{ $student['id'] }}/edit">Edit</a>
+                </td>
+            </tr>
+        @endforeach
     </table>
 @endsection

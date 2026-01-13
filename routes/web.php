@@ -7,19 +7,55 @@ Route::get('/', function () {
 });
 
 Route::get('/students', function () {
-    // create an array of students  
-    
-    return view('students.index');
+
+    // Create an array of students (static data)
+    $students = [
+        [
+            'id' => 1,
+            'name' => 'Juan Cruz',
+            'course' => 'BS Information Science',
+            'year' => '3rd Year'
+        ],
+        [
+            'id' => 2,
+            'name' => 'Maria Santos',
+            'course' => 'BS Computer Science',
+            'year' => '2nd Year'
+        ]
+    ];
+
+    // Pass the data to the view
+    return view('students.index', compact('students'));
 });
 
 Route::get('/students/create', function () {
     return view('students.create');
 });
 
-Route::get('/students/{id}', function () {
-    return view('students.show');
+Route::get('/students/{id}', function ($id) {
+
+    // Sample static student
+    $student = [
+        'id' => $id,
+        'name' => 'Juan Cruz',
+        'email' => 'juan@email.com',
+        'course' => 'BS Information Science',
+        'year' => '3rd Year'
+    ];
+
+    return view('students.show', compact('student'));
 });
 
-Route::get('/students/{id}/edit', function () {
-    return view('students.edit');
+Route::get('/students/{id}/edit', function ($id) {
+
+    // Sample static student
+    $student = [
+        'id' => $id,
+        'name' => 'Juan Cruz',
+        'email' => 'juan@email.com',
+        'course' => 'BS Information Science',
+        'year' => '3rd Year'
+    ];
+
+    return view('students.edit', compact('student'));
 });
